@@ -15,7 +15,6 @@ from models.review import Review
 class HBNBCommand(cmd.Cmd):
     """Defines the HolbertonBnB command interpreter."""
 
-
     prompt = "(hbnb) "
     __all_classes = {
         "BaseModel",
@@ -215,6 +214,7 @@ class HBNBCommand(cmd.Cmd):
             obj.__dict__.update({attribute_name: attribute_value})
 
         storage.save()
+
 
 if __name__ == "__main__":
     HBNBCommand().cmdloop()
